@@ -1,0 +1,8 @@
+Task not found: server
+[0m[32mAvailable tasks:[0m
+- [0m[36mlume[0m
+    echo "import 'lume/cli.ts'" | deno run --unstable -A -
+- [0m[36mbuild[0m
+    deno task lume
+- [0m[36mserve[0m
+    deno task lume -s

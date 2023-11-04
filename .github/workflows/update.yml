@@ -1,0 +1,22 @@
+name: Deploy latest version to production
+
+on:
+  push:
+    branches:        
+      - main
+
+jobs:
+    kickoff_event:
+        runs-on: ubuntu-latest
+    
+        steps:
+            - name: Kick off job on server
+              id: run_cd
+              env:
+                API_TOKEN: ${{ secrets.API_KEY }}
+                LB_TOKEN: ${{ secrets.LB_KEY }}
+              run: >
+                curl -vvv
+                -H "x-token-access: ${LB_TOKEN}" 
+                -H "X-API-Key: ${API_TOKEN}" 
+                'https://cronicle.bkrn.org/api/app/run_event/v1?id=elokfgq3fsc'
