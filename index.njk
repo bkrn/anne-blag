@@ -1,0 +1,13 @@
+<h1>Welcome to the AnneBlag</h1>
+<p>
+This is a portfolio of some of the Anne work I have done!
+</p>
+<h2>Posts</h2>
+<p>
+These are the posts I have made
+</p>
+<ul>
+{% for page in search.pages("kind=post") %}
+ <li><a href="{{ page.data.url }}">{{page.data.title}}</a></li>
+{% endfor %}
+</ul>
