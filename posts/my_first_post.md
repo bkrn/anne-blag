@@ -1,5 +1,6 @@
 ---
 title: My First Post
+author: Marianne
 kind: post
 ---
 # This is my first post!
